@@ -9,7 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,NgbModule.forRoot(),],
   providers: [],
   bootstrap: [AppComponent]
 })

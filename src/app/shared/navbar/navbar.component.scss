@@ -1,0 +1,23 @@
+
+.search{
+    width: 25rem;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.md-menu{
+  display: none;
+}
+
+
+@media (max-width:991px){
+  .md-menu{
+    display: block;
+  }
+
+  .lg-dropdown{
+    display: none;
+  }
+}

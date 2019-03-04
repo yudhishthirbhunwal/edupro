@@ -1,32 +1,50 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Edupro</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a class="navbar-brand ml-3" href="#">Edu-pro</a>
+    <button (click)="toggleNavbar = !toggleNavbar"  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span  class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+    <div  class="collapse navbar-collapse" [ngbCollapse]="!toggleNavbar" id="navbarSupportedContent">
+
+            <ng-template [ngIf] ="showSearchBox ">
+                <form class="form-inline my-2 my-lg-0 ml-auto ">
+                    <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+            </ng-template>
+
+
+     <ul class="navbar-nav mr-3 ml-auto text-md-center">
+        <li class="nav-item active d-none d-lg-block d-xl-block">
+          <a class="nav-link" href="#" (click)="showSearch()" ><i class="fa fa-search"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  >Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Forum</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">LogIn</a>
+        </li>
+        <div class="md-menu">
+            <div class="dropdown-divider"></div>
+            <li class="nav-item">
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Dashboard</a>
+            </li><li class="nav-item">
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Log Out</a>
+            </li>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-   
-  </div>
-</nav>
+        <li ngbDropdown class="nav-item lg-dropdown dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               User  <i class="fa fa-user ml-2"></i>
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" href="#">Log Out</a>
+
+            </div>
+          </li>
+      </ul>
+
+    </div>
+  </nav>
