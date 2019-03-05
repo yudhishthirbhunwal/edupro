@@ -15,6 +15,7 @@ import { CoursesDescriptionComponent } from './courses-description/courses-descr
 import { ForumComponent } from './forum/forum.component';
 import { CoursePreviewComponent } from './course-preview/course-preview.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -28,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
                   CoursesDescriptionComponent,
                   ForumComponent,
                   CoursePreviewComponent,
-                  ContactComponent],
+                  ContactComponent,
+                  AboutComponent],
   imports: [BrowserModule,
             AppRoutingModule,
             NgbModule.forRoot(),
@@ -41,6 +43,8 @@ import { ContactComponent } from './contact/contact.component';
               { path: 'courses-description', component: CoursesDescriptionComponent },
               { path: 'forum', component: ForumComponent },
               { path: 'login', component: LoginComponent },
+              { path: 'about', component: AboutComponent },
+
 
             ])
           ],
