@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand ml-3" href="#">Edu-pro</a>
+    <a class="navbar-brand ml-3" routerLink="/">Edu-pro</a>
     <button (click)="toggleNavbar = !toggleNavbar"  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span  class="navbar-toggler-icon"></span>
     </button>
@@ -18,18 +18,18 @@
           <a class="nav-link" href="#" (click)="showSearch()" ><i class="fa fa-search"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"  >Courses</a>
+          <a class="nav-link" routerLink="/courses"  >Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Forum</a>
+          <a class="nav-link " routerLink="/forum" tabindex="-1" aria-disabled="true">Forum</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">LogIn</a>
+            <a class="nav-link " routerLink="/login" tabindex="-1" aria-disabled="true">LogIn</a>
         </li>
         <div class="md-menu">
             <div class="dropdown-divider"></div>
             <li class="nav-item">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Dashboard</a>
+                <a class="nav-link " routerLink="/user-dashboard" tabindex="-1" aria-disabled="true">Dashboard</a>
             </li><li class="nav-item">
                 <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Log Out</a>
             </li>
@@ -39,7 +39,7 @@
                User  <i class="fa fa-user ml-2"></i>
             </a>
             <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" routerLink="/user-dashboard">Dashboard</a>
               <a class="dropdown-item" href="#">Log Out</a>
 
             </div>
