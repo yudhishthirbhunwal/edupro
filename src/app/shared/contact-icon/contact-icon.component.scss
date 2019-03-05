@@ -1,0 +1,45 @@
+.c-icon{
+  margin-bottom: 6rem;
+  margin-left: 2rem;
+  height: 7rem;
+  border-radius: .25rem;
+}
+.sc{
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  transition-delay: 1s;
+  z-index: 4;
+
+}
+
+.c-component{
+  z-index: 2;
+}
+
+.cicon-div:hover  + .sc {
+  display: inline-block;
+
+}
+
+.sc:hover{
+  display: inline-block;
+}
+
+
+@media (min-width : 769px){
+  .sc{
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width : 768px){
+  .sc{
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width : 576px){
+  .c-icon{
+    display: none;
+}
+}
