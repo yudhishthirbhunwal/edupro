@@ -1,0 +1,29 @@
+.c-icon{
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  height: 7rem;
+  border-radius: .25rem;
+}
+.sc{
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  transition-delay: 1s;
+}
+
+
+.cicon-div:hover  + .sc {
+  display: inline-block;
+
+}
+
+.sc:hover{
+  display: inline-block;
+}
+
+@media (max-width : 576px){
+  .c-icon{
+    margin-bottom: 5rem;
+    margin-left: 1rem;
+}
+}
