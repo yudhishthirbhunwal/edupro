@@ -10,21 +10,20 @@ import { CoursePreviewComponent } from './course-preview/course-preview.componen
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
-
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-{ path: 'courses', component: CoursesComponent },
-              { path: 'user-dashboard', component: UserDashboardComponent },
-              { path: 'contact', component: ContactComponent },
-              { path: 'course-preview', component: CoursePreviewComponent },
-              { path: 'courses-description', component: CoursesDescriptionComponent },
-              { path: 'forum', component: ForumComponent },
-              { path: 'login', component: LoginComponent },
-              { path: 'about', component: AboutComponent }
+  { path: '', component: HomeComponent },
+  { path: 'courses', component: CoursesComponent },
+  { path: 'user-dashboard', component: UserDashboardComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'course-preview', component: CoursePreviewComponent },
+  { path: 'courses-description', component: CoursesDescriptionComponent },
+  { path: 'forum', component: ForumComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
