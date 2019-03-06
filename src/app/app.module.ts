@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -33,21 +32,7 @@ import { AboutComponent } from './about/about.component';
                   AboutComponent],
   imports: [BrowserModule,
             AppRoutingModule,
-            NgbModule.forRoot(),
-            RouterModule.forRoot([
-              { path: '', component: HomeComponent },
-              { path: 'courses', component: CoursesComponent },
-              { path: 'user-dashboard', component: UserDashboardComponent },
-              { path: 'contact', component: ContactComponent },
-              { path: 'course-preview', component: CoursePreviewComponent },
-              { path: 'courses-description', component: CoursesDescriptionComponent },
-              { path: 'forum', component: ForumComponent },
-              { path: 'login', component: LoginComponent },
-              { path: 'about', component: AboutComponent },
-
-
-            ])
-          ],
+            NgbModule],
   providers: [],
   bootstrap: [AppComponent]
 })
