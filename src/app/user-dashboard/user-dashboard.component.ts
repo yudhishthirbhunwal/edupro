@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbProgressbarConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-dashboard.component.scss']
 })
 export class UserDashboardComponent implements OnInit {
+  constructor(config: NgbProgressbarConfig) {
+    // customize default values of progress bars used by this component tree
 
-  constructor() { }
-
-  ngOnInit() {
+    config.max = 1000;
+    config.striped = true;
+    config.animated = true;
+    config.type = 'success';
   }
 
+  ngOnInit() {}
 }
